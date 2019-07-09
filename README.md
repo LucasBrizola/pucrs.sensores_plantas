@@ -1,4 +1,4 @@
-# pucrs.sensores_plantas
+# pucrs.sensores_plantas [![Build Status](https://travis-ci.org/LucasBrizola/pucrs.sensores_plantas.svg?branch=master)](https://travis-ci.org/LucasBrizola/pucrs.sensores_plantas)
 
 Descrição do sistema:
 A descrição abaixo indica a informação disponível para o sistema que deve ser desenvolvido.
