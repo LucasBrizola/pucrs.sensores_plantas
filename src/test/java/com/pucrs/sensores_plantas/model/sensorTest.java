@@ -7,7 +7,7 @@ import org.junit.Test;
 public class sensorTest {
 	@Test
 	public void sensor() {
-		Sensor sensor = new Sensor(1,30,"");
+		Sensor sensor = new Sensor(1,30);
 		assertEquals(1,sensor.getId());
 		assertEquals(30,sensor.getUmidade());
 	}

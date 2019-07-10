@@ -1,19 +1,34 @@
 package com.pucrs.sensores_plantas.model;
 
+
+
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+import org.springframework.data.annotation.Id;
+
+@Entity
 public class Sensor {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
 	private int umidade;
 	private String message;
 
-	public Sensor(Integer id, int umidade, String message) {
+	protected Sensor() {
+		
+	}
+	
+	public Sensor(Integer id, int umidade) {
 		super();
 		this.id = id;
 		this.umidade = umidade;
-		this.message = message;
 	}
 
 	public int getId() {
-		return (int)id;
+		return (int) id;
 	}
 
 	public void setId(Integer id) {

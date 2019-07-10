@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customer Details</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>   
+</head>
+<body>
+	<h2>Sensor Details</h2>
+
+
+		<p th:text="${sensor.id}"> </p>
+		<p th:text="${sensor.umidade}"> </p>
+
+</body>
+</html>
