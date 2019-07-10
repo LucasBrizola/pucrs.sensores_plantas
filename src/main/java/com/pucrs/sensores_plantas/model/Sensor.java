@@ -12,8 +12,8 @@ public class Sensor {
 		this.message = message;
 	}
 
-	public Integer getId() {
-		return id;
+	public int getId() {
+		return (int)id;
 	}
 
 	public void setId(Integer id) {

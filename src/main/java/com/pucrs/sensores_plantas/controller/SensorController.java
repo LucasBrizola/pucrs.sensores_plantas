@@ -1,10 +1,12 @@
 package com.pucrs.sensores_plantas.controller;
 
+import java.util.Collection;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
+import com.pucrs.sensores_plantas.model.Sensor;
 import com.pucrs.sensores_plantas.repository.SensorRepository;
 
 @Controller
@@ -15,11 +17,11 @@ public class SensorController {
 		this.sensores = sensores;
 	}
 	
-	@GetMapping("/sensores/{id}")
-	public String listAllsensores(@PathVariable Long id, Model model) {
-		Optional<Sensor> s = sensores.findById(id);
-		model.addAttribute("sensor", s.get());
-		return "sensorDetails";
+	@GetMapping("/sensores")
+	public String processFindForm(Model model) {
+		Collection<Sensor> sensorList = sensores.findAll();	
+		model.addAttribute("sensores", sensorList);
+		return "sensores/sensoresList";
 	}
 	
 }
