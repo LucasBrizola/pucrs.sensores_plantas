@@ -4,12 +4,16 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
+import com.pucrs.sensores_plantas.service.SensorService;
+
 public class sensorTest {
 	@Test
 	public void sensor() {
-		Sensor sensor = new Sensor(1,30);
-		assertEquals(1,sensor.getId());
-		assertEquals(30,sensor.getUmidade());
+		SensorService ss = new SensorService();
+
+		Sensor sensor = ss.getSensorData();
+		assertEquals(1, sensor.getId());
+		assertEquals(30, sensor.getUmidade());
 	}
-	
+
 }
