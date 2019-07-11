@@ -7,6 +7,7 @@ public class Sensor {
 
 	private Integer id;
 	private int umidade;
+	private Planta plantaAtual;
 
 	protected Sensor() {
 		
@@ -42,4 +43,13 @@ public class Sensor {
                 ", umidade=" + umidade +
                 '}';
     }
+
+	public Planta getPlantaAtual() {
+		return plantaAtual;
+	}
+
+	public void setPlantaAtual(Planta plantaAtual) {
+		this.plantaAtual = plantaAtual;
+	}
+	//if(id = idplanta){trocaTipo}
 }

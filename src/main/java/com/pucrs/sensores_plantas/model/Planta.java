@@ -5,12 +5,16 @@ public class Planta {
 	private Integer id;
 	private int umidMin;
 	private int umidMax;
+	private Tipo tipo;
+	private Integer[] ids;
 	
 	public Planta() {
 		this.nome = "";
 		this.id = 0;
 		this.umidMax = 0;
 		this.umidMin = 0;
+		this.tipo = null;
+		this.ids = null;
 	}
 	
 	public Planta(String nome, Integer id, int umidMin, int umidMax) {
@@ -43,5 +47,14 @@ public class Planta {
 	}
 	public void setUmidMax(int umidMax) {
 		this.umidMax = umidMax;
+	}
+	
+	public void mudarTipo(Tipo tipo) {
+		this.tipo = tipo;
+	}
+
+	public void compararId(int id2) {
+		if(id == id2) return 
+		
 	}
 }
