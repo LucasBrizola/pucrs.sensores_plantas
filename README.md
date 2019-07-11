@@ -16,3 +16,5 @@ As informações coletadas pela dupla devem ser registradas na Wiki do repositó
 Serviços e bibliotecas adicionais devem ser localizados e integrados pela dupla, principalmente na questão de notificação e autorização de serviços. Código de repositórios públicos também pode ser utilizado pela dupla. Recomendamos implantar o sistema e utilizar uma forma de simular o recebimento de dados de sensores com procedimento ou código. Todas as fontes consultadas devem ser registradas.
 
 Garantias de qualidade referentes a teste e integração devem ser adotadas pela equipe. Recomendamos seguir a estrutura presente nos arquétipos da plataforma adotada.
+
+http://fundatec.dev.aioria.com.br/api/v1/humidity
