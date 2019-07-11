@@ -5,41 +5,37 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Sensor {
 
-	private Integer id;
-	private int umidade;
+	private String id;
+	private int humidity;
 
 	protected Sensor() {
-		
+
 	}
-	
-	public Sensor(Integer id, int umidade) {
+
+	public Sensor(String id, int humidity) {
 		super();
 		this.id = id;
-		this.umidade = umidade;
+		this.humidity = humidity;
 	}
 
-	public int getId() {
-		return (int) id;
+	public String getId() {
+		return id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 
-	public int getUmidade() {
-		return umidade;
+	public int getHumidity() {
+		return humidity;
 	}
 
-	public void setUmidade(int umidade) {
-		this.umidade = umidade;
+	public void setHumidity(int humidity) {
+		this.humidity = humidity;
 	}
 
-
-    @Override
-    public String toString() {
-        return "sensor{" +
-                "id='" + id+ '\'' +
-                ", umidade=" + umidade +
-                '}';
-    }
+/*	@Override
+	public String toString() {
+		return "sensor{" + "id='" + id + '\'' + ", umidade=" + umidade + '}';
+	} */
 }
