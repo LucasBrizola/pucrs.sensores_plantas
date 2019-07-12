@@ -2,23 +2,34 @@ package com.pucrs.sensores_plantas.model;
 
 public class Lavanda implements Tipo {
 
-	public Lavanda() {
+	protected Integer id = 42000;
+	protected int umdMin = 20;
+	protected int umdMax = 30;
+	protected String nome = "Lavandas";
 
+	public int getId() {
+		return id;
 	}
 
-	protected Integer id = 3242;
+	public String getNome() {
+		return nome;
+	}
 
-	public Integer getId() {
-		return id;
+	public int getUmdMin() {
+		return umdMin;
+	}
+
+	public int getUmdMax() {
+		return umdMax;
 	}
 
 	public String testUmidade(int umidade) {
 		String msg = null;
-		if (umidade < 60) {
+		if (umidade < umdMin) {
 			msg = "A umidade está abaixo do ideal!";}
-		else if(umidade > 80){
+		else if(umidade > umdMax){
 			msg = "A umidade está acima do ideal!";}
-		else if(umidade >= 60 && umidade <= 80){
+		else if(umidade >= umdMin && umidade <= umdMax){
 			msg = "A umidade está ideal!";}
 		return msg;
 	}

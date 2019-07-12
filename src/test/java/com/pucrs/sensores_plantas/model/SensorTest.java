@@ -11,7 +11,7 @@ public class SensorTest {
 		sensor.setId("10");
 		sensor.setHumidity(50);
 
-		assertEquals(10, (String)sensor.getId());
+		assertEquals(10, (int)sensor.getId());
 		assertEquals(50, sensor.getHumidity());
 	}
 }

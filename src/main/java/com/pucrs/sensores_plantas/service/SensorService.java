@@ -1,6 +1,5 @@
 package com.pucrs.sensores_plantas.service;
 
-
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -16,10 +15,7 @@ public class SensorService {
 	}
 
 	public Sensor getSensorData() {
-	return restTemplate.getForObject("http://fundatec.dev.aioria.com.br/api/v1/humidity", Sensor.class);
+		return restTemplate.getForObject("http://fundatec.dev.aioria.com.br/api/v1/humidity", Sensor.class);
 	}
-	
-	public Sensor SensorData() {
-		return new Sensor("2",40);
-	}
+
 }

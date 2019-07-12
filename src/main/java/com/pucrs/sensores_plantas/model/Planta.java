@@ -1,60 +1,62 @@
 package com.pucrs.sensores_plantas.model;
 
 public class Planta {
-	private String nome;
 	private Integer id;
-	private int umidMin;
-	private int umidMax;
+	private String nome;
+	private String mensagem;
+	private int umidade;
+	private int umdMin;
+	private int umdMax;
 	private Tipo tipo;
-	private Integer[] ids;
-	
-	public Planta() {
-		this.nome = "";
-		this.id = 0;
-		this.umidMax = 0;
-		this.umidMin = 0;
-		this.tipo = null;
-		this.ids = null;
+	private Sensor sensor;
+
+	protected Planta() {
+
 	}
-	
-	public Planta(String nome, Integer id, int umidMin, int umidMax) {
-		this.nome = nome;
-		this.id = id;
-		this.umidMax = umidMax;
-		this.umidMin = umidMin;
+
+	public Planta(Tipo tipo, Sensor sensor) {
+		this.id = tipo.getId();
+		this.nome = tipo.getNome();
+		this.umidade = sensor.getHumidity();
+		this.umdMin = tipo.getUmdMin();
+		this.umdMax = tipo.getUmdMax();
+		this.sensor = sensor;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+
 	public Integer getId() {
 		return id;
 	}
-	public void setId(Integer id) {
-		this.id = id;
+
+	public int getUmidade() {
+		return umidade;
 	}
-	public int getUmidMin() {
-		return umidMin;
+
+	public int getUmdMin() {
+		return umdMin;
 	}
-	public void setUmidMin(int umidMin) {
-		this.umidMin = umidMin;
+
+	public int getUmdMax() {
+		return umdMax;
 	}
-	public int getUmidMax() {
-		return umidMax;
-	}
-	public void setUmidMax(int umidMax) {
-		this.umidMax = umidMax;
+
+	public Sensor getSensor() {
+		return sensor;
 	}
 	
+	public String getMensagem() {
+		return mensagem;
+	}
+	
+	public void SetMensagem() {
+		this.mensagem = tipo.testUmidade(umidade);
+	}
+
 	public void mudarTipo(Tipo tipo) {
 		this.tipo = tipo;
 	}
 
-//	public void compararId(int id2) {
-//		
-//		
-//	}
 }
