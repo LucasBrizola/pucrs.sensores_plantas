@@ -10,10 +10,10 @@ public class PlantaTest {
 	
 	@Test
 	public void sensor() {
-		SensorService ss = new SensorService();
+		SensorService ss = new SensorService(null);
 
 		Sensor sensor = ss.getSensorData();
 		assertEquals(1, sensor.getId());
-		assertEquals(30, sensor.getUmidade());
+		assertEquals(30, sensor.getHumidity());
 	}
 }

@@ -48,4 +48,5 @@ public class Sensor {
 	public void setPlantaAtual(Planta plantaAtual) {
 		this.plantaAtual = plantaAtual;
 	}
+
 }

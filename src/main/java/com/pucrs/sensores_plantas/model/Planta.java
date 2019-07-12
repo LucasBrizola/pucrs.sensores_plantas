@@ -53,8 +53,8 @@ public class Planta {
 		this.tipo = tipo;
 	}
 
-	public void compararId(int id2) {
-		if(id == id2) return 
-		
-	}
+//	public void compararId(int id2) {
+//		
+//		
+//	}
 }
