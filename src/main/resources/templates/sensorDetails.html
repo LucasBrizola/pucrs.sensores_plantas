@@ -2,15 +2,23 @@
 
 <html xmlns:th="https://www.thymeleaf.org">
 <head>
-    <title>Sensor Details</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" th:href="@{/css/main.css}"/>   
+<title>Sensor Details</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!--     <link rel="stylesheet" th:href="@{/css/main.css}"/>    -->
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
 </head>
-  <body>
-
-    <h2>Sensor</h2>
-    
-	<p><b th:text="${s.id}"></b> </p>
-   <p><b th:text="${s.humidity}"></b> </p>
-  </body>
+<body>
+	<div class="container">
+		<h2>Sensor</h2>
+	
+		<p>Id:
+			<b th:text="${s.id}"></b>
+		</p>
+		<p>Umidade:
+			<b th:text="${s.humidity}"></b>
+		</p>
+	</div>
+	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
 </html>
