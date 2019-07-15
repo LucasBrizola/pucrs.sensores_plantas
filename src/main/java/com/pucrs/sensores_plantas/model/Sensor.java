@@ -34,9 +34,4 @@ public class Sensor {
 		this.humidity = humidity;
 	}
 
-	@Override
-	public String toString() {
-		return "sensor{" + "id='" + id + '\'' + ", umidade=" + humidity + '}';
-	}
-
 }

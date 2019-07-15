@@ -8,7 +8,6 @@ public class Planta {
 	private int umdMin;
 	private int umdMax;
 	private Tipo tipo;
-	private Sensor sensor;
 
 	protected Planta() {
 
@@ -20,7 +19,6 @@ public class Planta {
 		this.umidade = sensor.getHumidity();
 		this.umdMin = tipo.getUmdMin();
 		this.umdMax = tipo.getUmdMax();
-		this.sensor = sensor;
 	}
 
 	public String getNome() {
@@ -41,10 +39,6 @@ public class Planta {
 
 	public int getUmdMax() {
 		return umdMax;
-	}
-
-	public Sensor getSensor() {
-		return sensor;
 	}
 	
 	public String getMensagem() {

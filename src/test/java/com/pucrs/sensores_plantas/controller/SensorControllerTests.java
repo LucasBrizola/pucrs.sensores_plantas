@@ -26,7 +26,7 @@ import com.pucrs.sensores_plantas.service.SensorService;
 public class SensorControllerTests {
 
 	@Autowired
-	private SensorController sensorController;
+	private PlantaController sensorController;
 
 	private MockMvc mockMvc;
 
