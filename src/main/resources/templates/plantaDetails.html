@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<title>Planta Details</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+	<div class="container">
+		<h2>Planta</h2>
+	
+		<p>Id:
+			<b th:text="${p.id}"></b>
+		</p>
+		<p>Planta:
+			<b th:text="${p.nome}"></b>
+		</p>
+		<p>Umidade:
+			<b th:text="${p.umidade}"></b>
+		</p>
+		<p>Status:
+			<b th:text="${p.mensagem}"></b>
+		</p>
+	</div>
+	<script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
