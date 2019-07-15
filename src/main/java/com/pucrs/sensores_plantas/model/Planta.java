@@ -7,7 +7,9 @@ public class Planta {
 	private int umidade;
 	private int umdMin;
 	private int umdMax;
+	@SuppressWarnings("unused")
 	private Tipo tipo;
+	private Sensor sensor;
 
 	protected Planta() {
 
@@ -19,6 +21,8 @@ public class Planta {
 		this.umidade = sensor.getHumidity();
 		this.umdMin = tipo.getUmdMin();
 		this.umdMax = tipo.getUmdMax();
+		this.mensagem = tipo.testUmidade(umidade);
+		this.sensor = sensor;
 	}
 
 	public String getNome() {
@@ -40,17 +44,28 @@ public class Planta {
 	public int getUmdMax() {
 		return umdMax;
 	}
-	
+
 	public String getMensagem() {
 		return mensagem;
 	}
+
+	public void SetSensor(Sensor sensor) {
+		this.sensor = sensor;
+	}
 	
-	public void SetMensagem() {
-		this.mensagem = tipo.testUmidade(umidade);
+	public Sensor getSensor() {
+		return sensor;
 	}
 
 	public void mudarTipo(Tipo tipo) {
 		this.tipo = tipo;
+		this.id = tipo.getId();
+		this.nome = tipo.getNome();
+		this.umidade = sensor.getHumidity();
+		this.umdMin = tipo.getUmdMin();
+		this.umdMax = tipo.getUmdMax();
+		this.mensagem = tipo.testUmidade(umidade);
+		this.sensor = getSensor();
 	}
 
 }

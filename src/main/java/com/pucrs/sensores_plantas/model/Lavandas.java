@@ -1,6 +1,6 @@
 package com.pucrs.sensores_plantas.model;
 
-public class Lavanda implements Tipo {
+public class Lavandas implements Tipo {
 
 	protected Integer id = 42000;
 	protected int umdMin = 20;

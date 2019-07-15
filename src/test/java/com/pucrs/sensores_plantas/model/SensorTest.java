@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class SensorTest {
 	@Test
-	public void sensorModelTest() {
+	public void DeveCriarUmSensor() {
 		Sensor sensor = new Sensor();
 		sensor.setId("10");
 		sensor.setHumidity(50);
